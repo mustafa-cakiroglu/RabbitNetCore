@@ -29,6 +29,7 @@ namespace RabbitWebConsumer
             {
                 x.UseMongoDB(Configuration["MongoConnection"]);
                 x.UseRabbitMQ(Configuration["EventBusConnection"]);
+                x.UseDashboard();
             });
             services.AddControllers();
         }
